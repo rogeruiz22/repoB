@@ -2,13 +2,13 @@ on: [push]
 
 jobs:
   hello_world_job:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     name: A job to say hello
     steps:
       - uses: actions/checkout@v3
       - id: foo
         uses: actions/repoA@v1
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'Roger Ruiz'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
